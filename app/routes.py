@@ -15,6 +15,8 @@ from flask_login import login_required
 from flask import request
 from urllib.parse import urlsplit
 
+from app.forms import RegistrationForm
+
 # Decorators: modifies the fucntion that follows it.
 # A common pattern with decorators is to use them to register functions as callbacks for certain events.
 # In this case, the @app.route decorator creates an association between the URL given as an argument and the function.
@@ -34,6 +36,23 @@ def index():
         }
     ]
     return render_template("index.html", title="Home", posts=posts)
+
+
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        user = User(username=form.username.data, email=form.email.data)
+        user.set_password(form.password.data)
+        db.session.add(user)
+        db.session.commit()
+        flash('Congratulations, you are now a registered user!')
+        return redirect(url_for('login'))
+    return render_template('register.html', title='Register', form=form)
+
 
 
 # This function mapped to the /login URL that creates a form
@@ -56,8 +75,19 @@ def login():
 
 
 
-
 @app.route('/logout')
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
+
+
+@app.route('/user/<username>')
+@login_required
+def user(username):
+    user = db.first_or_404(sa.select(User).where(User.username == username))
+    posts = [
+        {'author': user, 'body': 'Test post #1'},
+        {'author': user, 'body': 'Test post #2'}
+    ]
+    return render_template('user.html', user=user, posts=posts)
