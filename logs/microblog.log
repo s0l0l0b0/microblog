@@ -1,0 +1,26 @@
+2024-10-08 22:13:50,833 INFO: Microblog startup [in /home/sololobo/microblog/app/__init__.py:62]
+2024-10-08 22:14:00,925 INFO: Microblog startup [in /home/sololobo/microblog/app/__init__.py:62]
+2024-10-08 23:29:21,761 INFO: Microblog startup [in /home/sololobo/microblog/app/__init__.py:62]
+2024-10-08 23:30:23,949 INFO: Microblog startup [in /home/sololobo/microblog/app/__init__.py:62]
+2024-10-08 23:31:28,094 INFO: Microblog startup [in /home/sololobo/microblog/app/__init__.py:62]
+2024-10-08 23:32:43,913 INFO: Microblog startup [in /home/sololobo/microblog/app/__init__.py:62]
+2024-10-09 00:00:33,438 INFO: Microblog startup [in /home/sololobo/microblog/app/__init__.py:62]
+2024-10-09 00:02:56,924 ERROR: Exception on /follow/sololobo [POST] [in /home/sololobo/microblog/.venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/sololobo/microblog/.venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sololobo/microblog/.venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sololobo/microblog/.venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sololobo/microblog/.venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/sololobo/microblog/.venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/sololobo/microblog/app/routes.py", line 127, in follow
+    sa.select(User).where(User.suername == username))
+AttributeError: type object 'User' has no attribute 'suername'
+2024-10-09 00:03:39,052 INFO: Microblog startup [in /home/sololobo/microblog/app/__init__.py:62]
+2024-10-11 17:13:11,747 INFO: Microblog startup [in /home/sololobo/microblog/app/__init__.py:62]
+2024-10-11 17:14:02,571 INFO: Microblog startup [in /home/sololobo/microblog/app/__init__.py:62]
+2024-10-11 17:14:09,931 INFO: Microblog startup [in /home/sololobo/microblog/app/__init__.py:62]
