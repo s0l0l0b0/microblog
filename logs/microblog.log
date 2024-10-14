@@ -24,3 +24,5 @@ AttributeError: type object 'User' has no attribute 'suername'
 2024-10-11 17:13:11,747 INFO: Microblog startup [in /home/sololobo/microblog/app/__init__.py:62]
 2024-10-11 17:14:02,571 INFO: Microblog startup [in /home/sololobo/microblog/app/__init__.py:62]
 2024-10-11 17:14:09,931 INFO: Microblog startup [in /home/sololobo/microblog/app/__init__.py:62]
+2024-10-11 17:39:29,966 INFO: Microblog startup [in /home/sololobo/microblog/app/__init__.py:62]
+2024-10-14 17:40:29,901 INFO: Microblog startup [in /home/sololobo/microblog/app/__init__.py:62]
