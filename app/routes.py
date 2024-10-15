@@ -45,8 +45,10 @@ def index():
     #     }
     # ]
     # displaying real posts in homepage
-    posts = db.session.scalars(current_user.following_posts()).all()
-    return render_template("index.html", title="Home", form=form, posts=posts)
+    # posts = db.session.scalars(current_user.following_posts()).all()
+    page = request.args.get('page', 1, type=int)
+    posts = db.paginate(current_user.following_posts(), page=page, per_page=app.config['POSTS_PER_PAGE'], error_out=False)
+    return render_template("index.html", title="Home", form=form, posts=posts.items)
 
 
 
@@ -118,7 +120,7 @@ def before_request():
 @login_required
 def edit_profile():
     form = EditProfileForm()
-    if form.validate_on_submit(current_user.username):
+    if form.validate_on_submit():
         current_user.username = form.username.data
         current_user.about_me = form.about_me.data
         db.session.commit()
@@ -169,3 +171,13 @@ def unfollow(username):
     else:
         return redirect(url_for('index'))
     
+
+# show global posts
+@app.route('/explore')
+@login_required
+def explore():
+    page = request.args.get('page', 1, type=int)
+    query = sa.select(Post).order_by(Post.timestamp.desc())
+    posts = db.paginate(query, page=page,
+                        per_page=app.config['POSTS_PER_PAGE'], error_out=False)
+    return render_template('index.html', title='Explore', posts=posts.items)
