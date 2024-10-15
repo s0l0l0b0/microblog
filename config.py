@@ -15,4 +15,4 @@ class Config:
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS = ['your-email@example.com']
     # paginaton: 3 posts per page
-    POSTS_PER_PAGE = 3
+    POSTS_PER_PAGE = 25
