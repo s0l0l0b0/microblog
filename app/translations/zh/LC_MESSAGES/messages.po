@@ -1,0 +1,143 @@
+# Chinese translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-11-13 17:18+0800\n"
+"PO-Revision-Date: 2024-11-13 17:22+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: app/__init__.py:24
+msgid "Please log in to access this page."
+msgstr "请登录进入此页."
+
+#: app/email.py:22
+msgid "[Microblog] Reset Your Password"
+msgstr "[Microblog]重置密码"
+
+#: app/forms.py:13 app/forms.py:20 app/forms.py:55
+msgid "Username"
+msgstr "用户名称"
+
+#: app/forms.py:14 app/forms.py:22 app/forms.py:47
+msgid "Password"
+msgstr "密码"
+
+#: app/forms.py:15
+msgid "Remember Me"
+msgstr "记住我"
+
+#: app/forms.py:16 app/routes.py:77
+msgid "Sign In"
+msgstr "登录"
+
+#: app/forms.py:21 app/forms.py:42
+msgid "Email"
+msgstr "电邮"
+
+#: app/forms.py:24 app/forms.py:49
+msgid "Repeat Password"
+msgstr "重复密码"
+
+#: app/forms.py:26 app/routes.py:98
+msgid "Register"
+msgstr "登记册"
+
+#: app/forms.py:32 app/forms.py:69
+msgid "Please use a different username."
+msgstr "请使用不同的用户名."
+
+#: app/forms.py:38
+msgid "Please use a different email address."
+msgstr "请使用不同的电子邮件地址."
+
+#: app/forms.py:43 app/forms.py:51
+msgid "Request Password Reset"
+msgstr "请求密码重置"
+
+#: app/forms.py:56
+msgid "About me"
+msgstr "关于我"
+
+#: app/forms.py:58 app/forms.py:79
+msgid "Submit"
+msgstr "提交"
+
+#: app/forms.py:77
+msgid "Say something"
+msgstr "講啲嘢啦"
+
+#: app/routes.py:31
+msgid "Your post is now live!"
+msgstr "你的帖子现在是活的！"
+
+#: app/routes.py:40
+msgid "Home"
+msgstr "主页"
+
+#: app/routes.py:56
+msgid "Explore"
+msgstr "探索"
+
+#: app/routes.py:70
+msgid "Invalid username or password"
+msgstr "用户名或密码无效"
+
+#: app/routes.py:96
+msgid "Congratulations, you are now a registered user!"
+msgstr "恭喜你，你现在是一个注册用户！"
+
+#: app/routes.py:112
+msgid "Check your email for the instructions to reset your password"
+msgstr "检查您的电子邮件以获取重置密码的说明"
+
+#: app/routes.py:115
+msgid "Reset Password"
+msgstr "重置密码"
+
+#: app/routes.py:129
+msgid "Your password has been reset"
+msgstr "您的密码已重置"
+
+#: app/routes.py:160
+msgid "Your changes have been saved"
+msgstr "您的更改已保存"
+
+#: app/routes.py:165
+msgid "Edit Profile"
+msgstr "编辑个人资料"
+
+#: app/routes.py:177 app/routes.py:198
+#, python-format
+msgid "User %(username)s not found."
+msgstr "未找到用户%(username)。"
+
+#: app/routes.py:180
+msgid "You cannot follow yourself!"
+msgstr "你无法追随你自己！"
+
+#: app/routes.py:184
+#, python-format
+msgid "You are following %(username)s!"
+msgstr "您正在关注%(username)s!"
+
+#: app/routes.py:201
+msgid "You cannot unfollow yourself!"
+msgstr "你不能解开自己！"
+
+#: app/routes.py:205
+#, python-format
+msgid "You are not following %(username)s."
+msgstr "您没有遵循%(username)s."
+

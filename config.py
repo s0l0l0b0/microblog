@@ -16,3 +16,6 @@ class Config:
     ADMINS = ['your-email@example.com']
     # paginaton: 3 posts per page
     POSTS_PER_PAGE = 25
+
+    # different language for the application
+    LANGUAGES = ['en', 'zh', 'bn']
